@@ -1,0 +1,29 @@
+name,price,rent,house_price,color
+Große Freiheit,60,2,50,Brown
+Reeperbahn,60,4,50,Brown
+Sylversteralle,100,6,50,Light-Blue
+Hindenburgstraße,100,6,50,Light-Blue
+Hagenbeck,120,8,50,Light-Blue
+Deichstraße,140,10,100,Pink
+Heiligengeistfeld,140,10,100,Pink
+Großeelbstraße,160,12,100,Pink
+Kehrwieder,180,14,100,Orange
+Krayenkamp,180,14,100,Orange
+Magellan-Terassen,200,16,100,Orange
+Rothenbaumchaussee,220,18,150,Red
+Gänsemarkt,220,18,150,Red
+Mönkebergstraße,240,20,150,Red
+Große Bleichen,260,22,150,Yellow
+Neuer Wall,260,22,150,Yellow
+Ballindamm,280,24,150,Yellow
+Rathausmarkt,300,26,200,Green
+Alsterarkaden,300,26,200,Green
+Jungfernstieg,320,28,200,Green
+Schöne Aussicht,350,35,200,Dark-Blue
+Elbchaussee,400,50,200,Dark-Blue
+Flughafen Fulsbüttel,200,25,0,Station
+Landungsbrücken,200,25,0,Station
+Bahnhof Dammtor,200,25,0,Station
+Hauptbahnhof,200,25,0,Station
+Elektrizitätswerk,150,0,0,Utility
+Wasserwerk,150,0,0,Utility

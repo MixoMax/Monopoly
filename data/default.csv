@@ -21,3 +21,9 @@ Hauptstraße,300,26,200,Green
 Bahnhofsstraße,320,28,200,Green
 Parkstraße,350,35,200,Dark-Blue
 Schlossalle,400,50,200,Dark-Blue
+Südbahnhof,200,25,0,Station
+Westbahnhof,200,25,0,Station
+Nordbahnhof,200,25,0,Station
+Hauptbahnhof,200,25,0,Station
+Elektrizitätswerk,150,0,0,Utility
+Wasserwerk,150,0,0,Utility
