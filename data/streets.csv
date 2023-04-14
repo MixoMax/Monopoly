@@ -3,3 +3,21 @@ Badstraße,60,2,50,Brown
 Turmstraße,60,4,50,Brown
 Chausseestraße,100,6,50,Light-Blue
 Elisenstraße,100,6,50,Light-Blue
+Poststraße,120,8,50,Light-Blue
+Seestraße,140,10,100,Pink
+Hafenstraße,140,10,100,Pink
+Neue Straße,160,12,100,Pink
+Münchener Straße,180,14,100,Orange
+Wiener Straße,180,14,100,Orange
+Berliner Straße,200,16,100,Orange
+Theatherstraße,220,18,150,Red
+Museumsstraße,220,18,150,Red
+Opernplatz,240,20,150,Red
+Lessingstraße,260,22,150,Yellow
+Schillerstraße,260,22,150,Yellow
+Goethestraße,280,24,150,Yellow
+Rathausplatz,300,26,200,Green
+Hauptstraße,300,26,200,Green
+Bahnhofsstraße,320,28,200,Green
+Parkstraße,350,35,200,Dark-Blue
+Schlossalle,400,50,200,Dark-Blue
