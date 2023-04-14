@@ -36,6 +36,20 @@ class Player():
     
     def update_streets(self):
         self.owned_streets = [street for street in streets if street.owner == self]
+    
+    def use_jail_card(self):
+        #player can decide to use jail card
+        player_choice = input("Do you want to use your get out of jail free card? (y/n): ")
+        
+        player_choice = player_choice.lower() == "y"
+        
+        if player_choice:
+            self.jail_card = False
+            self.jail = False
+            self.jail_turns = 0
+            return True
+        else:
+            return False
 
 
 
@@ -124,7 +138,8 @@ class Game():
                 return True
         
         if player.jail_card == True:
-            
+            # player can use card to get out of jail
+            pass
         
                 
 
