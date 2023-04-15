@@ -10,9 +10,12 @@ class Player():
         self.jail = False
         self.jail_turns = 0
         self.jail_card = False
+        self.is_bankrupt = False
     
     def update_money(self, amount):
         self.money += amount
+        if self.money < 0:
+            self.is_bankrupt = True
     
     def can_afford(self, amount):
         return self.money >= amount

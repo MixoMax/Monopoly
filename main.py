@@ -6,6 +6,13 @@ from functions.csv_to_streets import csv_to_streets
 
 # Monopoly game in python
 
+# TODO:
+# - implement chance and community chest cards
+# - implement trading
+# - fix rent calculation for houses and hotels
+# - implement bankruptcy
+# - implement user interface / prompting
+
 global streets  
 
 def startup():
@@ -18,6 +25,9 @@ def startup():
         case _:
             print("Invalid input")
             startup()
+    
+    for street in streets:
+        print(street)
 
 
 players = [Player("Player 1", 1500), Player("Player 2", 1500), Player("Player 3", 1500), Player("Player 4", 1500)]
