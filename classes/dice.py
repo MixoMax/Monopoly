@@ -6,7 +6,7 @@ class Dice():
     
     def roll(self, num_roles=1):
         rolls = []
-        for i in range(num_roles):
+        for _ in range(num_roles):
             rolls.append(random.randint(1, self.sides))
         return rolls
 

@@ -21,7 +21,7 @@ class Player():
         return self.money >= amount
     
     def update_streets(self):
-        self.owned_streets = [street for street in Game.streets if street.owner == self]
+        self.owned_streets = [street.name for street in Game.streets if street.owner == self]
     
     def use_jail_card(self):
         #player can decide to use jail card
@@ -36,3 +36,8 @@ class Player():
             return True
         else:
             return False
+    
+    def roll_dice(self):
+        dice_roll = Game.dice.roll(2)
+        print(f"{self.name} rolled {dice_roll[0]} and {dice_roll[1]}")
+        return dice_roll

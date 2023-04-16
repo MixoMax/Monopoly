@@ -16,6 +16,7 @@ from functions.csv_to_streets import csv_to_streets
 global streets  
 
 def startup():
+    game = Game()
     board = input("What board do you want to play on?\n\n[Q] Exit\n\n[1] Default\n[2] Hamburg\n\nAnswer: ")
     match board:
         case "1":
@@ -27,7 +28,9 @@ def startup():
             startup()
     
     for street in streets:
-        print(street)
+        game.streets.append({"name": street.name, "owner": None, "houses": 0, "mortgaged": False})
+
+    print(game.dice.roll(2))
 
 
 players = [Player("Player 1", 1500), Player("Player 2", 1500), Player("Player 3", 1500), Player("Player 4", 1500)]

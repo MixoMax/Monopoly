@@ -2,11 +2,11 @@ from classes.dice import Dice
 from classes.board import Board
 
 class Game():
-    def __init__(self, players, streets):
-        self.players = players
-        self.player_count = len(players)
-        self.streets = streets
-        self.board = Board(streets)
+    def __init__(self):
+        self.players = []
+        self.player_count = 0
+        self.streets = []
+        self.board = 0
         self.dice = Dice(6)
         self.current_player = 0
         self.doubles = {} # {player: num_doubles}
@@ -62,5 +62,4 @@ class Game():
                 player.jail_turns = 0
                 return True
         return False
-        
-        
+
