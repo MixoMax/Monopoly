@@ -1,4 +1,17 @@
-from classes.street import Street
+from classes import Street
+
+def to_int(s):
+    try:
+        return int(s)
+    except ValueError:
+        int_str =""
+        for char in str(s):
+            if char == ".":
+                break
+            int_str += str(char)
+        
+        return int(int_str)
+    
 
 def csv_to_streets(file_path = "./data/default.csv"):
     streets = []

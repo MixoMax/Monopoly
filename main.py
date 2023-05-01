@@ -1,39 +1,29 @@
-import pygame as pg
+from functions.functions import *
+from classes import Player, Street
 import random
-from classes.game import Game
-from classes.player import Player
-from functions.csv_to_streets import csv_to_streets
 
-# Monopoly game in python
+players = [Player("Player 1"), Player("Player 2")]
 
-# TODO:
-# - implement chance and community chest cards
-# - implement trading
-# - fix rent calculation for houses and hotels
-# - implement bankruptcy
-# - implement user interface / prompting
+streets = csv_to_streets()
 
-global streets  
 
-def startup():
-    game = Game()
-    board = input("What board do you want to play on?\n\n[Q] Exit\n\n[1] Default\n[2] Hamburg\n\nAnswer: ")
-    match board:
-        case "1":
-            streets = csv_to_streets()
-        case "2":
-            streets = csv_to_streets("./data/hamburg.csv")
-        case _:
-            print("Invalid input")
-            startup()
+# main game loop
+
+print(len(streets))
+
+while True:
+    #player 1 move
+    player = players[0]
     
-    for street in streets:
-        game.streets.append({"name": street.name, "owner": None, "houses": 0, "mortgaged": False})
-
-    print(game.dice.roll(2))
-
-
-players = [Player("Player 1", 1500), Player("Player 2", 1500), Player("Player 3", 1500), Player("Player 4", 1500)]
-
-if __name__ == "__main__":
-    startup()
+    dice = (random.randint(1, 6), random.randint(1, 6))
+    
+    player.move(sum(dice))
+    
+    street = streets[player.position]
+    
+    if street.owner != player and street.owner != None:
+        player.pay_player(street.owner, street.get_rent())
+    elif street.owner == None:
+        decision = input(f"Would you like to buy {street.name} for {street.price}? (y/n)")
+        if decision in ["y", "yes"]:
+            player.buy_street(street)
